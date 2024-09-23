@@ -215,4 +215,3 @@ NO* posicaoElemento(int numero)
 	}
 	return aux;
 }
-//oi
