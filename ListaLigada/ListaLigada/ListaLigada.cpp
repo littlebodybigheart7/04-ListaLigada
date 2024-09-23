@@ -145,12 +145,60 @@ void inserirElemento()
 
 void excluirElemento()
 {
-	
+	if (primeiro == NULL) {
+		cout << "Lista vazia. \n";
+		return;
+	}
+	else {
+		int del;
+		cout << "Digite o numero que quer deletar: ";
+		cin >> del;
+
+		NO* aux = primeiro;
+		NO* anterior = NULL;
+
+		while (aux != NULL) {
+			NO* paraDel = aux;
+			if (aux->valor == del) {
+				if (anterior == NULL) {
+					primeiro = aux->prox;
+				}
+				else {
+					anterior->prox = aux->prox;
+				}
+				free(paraDel);
+				cout << "Elemento excluido! \n";
+				return;
+			}
+			anterior = aux;
+			aux = aux->prox;
+		}
+		cout << "Elemento nao encontrado :(. \n";
+	}
 }
 
 void buscarElemento()
 {
-	
+	if (primeiro == NULL) {
+		cout << "Lista vazia. \n";
+		return;
+	}
+	else {
+		int busca;
+		cout << "Digite o elemento que quer encontrar: ";
+		cin >> busca;
+
+		NO* aux = primeiro;
+		while (aux != NULL) {
+			if (aux->valor == busca) {
+				cout << "O elemento esta na lista :). \n";
+				return;
+			}
+			aux = aux->prox;
+		}
+		cout << "Elemento nao encontrado :(. \n";
+	}
+
 }
 
 
