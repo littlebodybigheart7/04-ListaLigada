@@ -201,8 +201,6 @@ void buscarElemento()
 
 }
 
-
-
 // retorna um ponteiro para o elemento buscado
 // ou NULL se o elemento não estiver na lista
 NO* posicaoElemento(int numero)
@@ -217,3 +215,4 @@ NO* posicaoElemento(int numero)
 	}
 	return aux;
 }
+//oi
